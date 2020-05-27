@@ -3,12 +3,12 @@
 
 ## 安裝
 ### CDN
-也需要嵌入`JQuery`檔案才可以正常使用`validate.js`。
+引入`validate.js`外，也需要嵌入`jquery.js`檔案才可正常使用。
 ```
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 ```
-首先在HTML中寫入要呈現的表單欄位，這裡的CSS套用`Bootstrap4`。
+首先在HTML中寫入畫面要呈現的表單欄位，這裡的CSS套用`Bootstrap4`。
 ```
 // index.html
 
@@ -35,4 +35,19 @@
     <button type="submit" class="btn btn-primary">Sumbit</button>
 </form>
 ```
-`<label for="OOO">`要和`<input id="OOO">`對應，而`<input name="XXX">`則是要和.js檔的名稱相同，反正大家都取一樣的也無所謂。
+![image](https://github.com/PeggyHsiao/vliadate.js/images/view.jpg)
+`label的for值`要和`input的id值`對應，而`input的name`則是要和.js檔的名稱相同，反正大家都取一樣的也無所謂。
+```
+// main.js
+
+$(function () {
+  $('#form-content').validate({
+    rules: {
+        ...
+    },
+    messages: {
+        ...
+    }
+  })
+});
+```

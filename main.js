@@ -1,5 +1,8 @@
 $(function () {
   $('#form-content').validate({
+    submitHandler: function () {
+      alert("D");
+    },
     rules: {
       'email': { required: true },
       'password': { required: true, number: true, digits: true, rangelength: [6, 12] },
