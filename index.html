@@ -17,24 +17,32 @@
         <form id="form-content">
             <h2>validate.js範例表單</h2>
             <hr>
+            
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
+                    <label for="username" class="form-group">使用者代號</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="col-md-6">
                     <label for="email" class="form-group">電子信箱</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="請輸入電子信箱">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col-md-6">
                     <label for="password" class="form-group">密碼</label>
-                    <input type="password" class="form-control" id="password" name="password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
                 <div class="col-md-6">
                     <label for="password-again" class="form-group">確認密碼</label>
-                    <input type="password" class="form-control" id="password-again" name="password-again">
+                    <input type="password" class="form-control" id="password-again" name="password-again"
+                        placeholder="Confirm password">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Sumbit</button>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary">Sumbit</button>
+            </div>
         </form>
     </div>
 

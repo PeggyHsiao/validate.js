@@ -3,3 +3,6 @@
 #form-content > h2 { text-align: center; font-weight: 600; }
 #form-content .row{ margin-bottom: 30px; }
 
+.error{ color: red; }
+
+button{ margin-top: 30px; width: 150px; }
