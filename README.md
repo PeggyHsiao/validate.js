@@ -35,7 +35,7 @@
     <button type="submit" class="btn btn-primary">Sumbit</button>
 </form>
 ```
-![image](https://github.com/PeggyHsiao/vliadate.js/images/view.jpg)
+![](https://github.com/PeggyHsiao/vliadate.js/blob/master/images/view.JPG)
 `label的for值`要和`input的id值`對應，而`input的name`則是要和.js檔的名稱相同，反正大家都取一樣的也無所謂。
 ```
 // main.js
