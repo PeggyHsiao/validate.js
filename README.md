@@ -4,12 +4,12 @@
 ## 安裝
 ### CDN
 引入`validate.js`外，也需要嵌入`jquery.js`檔案才可正常使用。
-```
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"</script>
+```js
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 ```
 首先在HTML中寫入畫面要呈現的表單欄位，這裡的CSS套用bootstrap4。
-```
+```htm
 // index.html
 
 <div class="container">
@@ -51,7 +51,7 @@
 現在開啟畫面畫長成這樣，簡單的四個欄位分別是使用者代號、電子信箱、密碼、確認密碼。  
 ![](https://github.com/PeggyHsiao/vliadate.js/blob/master/images/view.JPG)  
 再來就是在js檔案中設定欄位的驗證資料了。
-```
+```js
 // main.js
 
 $(function () {
@@ -71,7 +71,7 @@ $(function () {
 `rules`的屬性有很多，可以到[菜鳥教程](https://www.runoob.com/jquery/jquery-plugin-validate.html)看。  
 
 Username在這裡設定為必填欄位。如果沒輸入就按下submit則會跳出提示訊息。
-```
+```js
 rules: {
     'username': {
         required: true,
@@ -82,7 +82,7 @@ messages: {
 }
 ```
 如果要驗證Email的時候，可以在`roules`裡面加上`email:true`就會自動檢查是否符合電子信箱的格式。  
-```
+```js
 rules: {
     'email': {
         email: true,
@@ -93,7 +93,7 @@ messages: {
 }
 ```
 `number:true`代表只能輸入數值；`digits:true`代表只能輸入正整數；另外利用`rangelength`可以限制輸入的字數長度，使用陣列存放。
-```
+```js
 rules: {
     'password': {
         required: true,
@@ -107,7 +107,7 @@ messages: {
 }
 ```
 其中感覺比較好用的是確認密碼功能，可以利用`equalTo:'#password'`來驗證輸入的資料是否和`id='password'`一樣。
-```
+```js
 rules: {
     'password-again': {
         required: true,
